@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script> -->
+    <title>記帳</title>
+</head>
+<body>
+    <h1>記帳</h1>
+    <div id="app">
+        <!--Date 分類 紐支出 紐收入 Note paymentMethod paymentBy 台幣支出 換算台幣-->
+        <div class="entry-form">
+            <input type="date" id="date" placeholder="yyyy/mm/dd">
+            <select id="category">
+                <option value="超市">超市</option>
+                <option value="娛樂">娛樂</option>
+                <option value="紀念品">紀念品</option>
+                <option value="交通">交通</option>
+                <option value="服裝">服裝</option>
+                <option value="住宿">住宿</option>
+                <option value="租車">租車</option>
+                <option value="油錢">油錢</option>
+                <option value="外食">外食</option>
+                <option value="電信">電信</option>
+                <option value="存款">存款</option>
+                <option value="其他">其他</option>
+            </select>
+            <input type="number" id="amount-NZ" placeholder="紐支出">
+            <input type="number" id="salary" placeholder="紐收入">
+            <input type="text" id="description" placeholder="Note">
+            <select id="payment-method">
+                <option value="cash">Cash</option>
+                <option value="國泰-8">國泰-8</option>
+                <option value="玉山">玉山</option>
+                <option value="ANZ-8">ANZ-8</option>
+                <option value="ANZ-E">ANZ-E</option>
+                <option value="台新">台新</option>
+                <option value="匯豐">匯豐</option>
+                <option value="花旗">花旗</option>
+                <option value="國泰-E">國泰-E</option>
+                <option value="匯款">匯款</option>
+            </select>
+            <select id="payment-by">
+                <option value="EG">EG</option>
+                <option value="J8">J8</option>
+            </select>
+            <input type="number" id="amount-TW" placeholder="台幣支出">
+            <input type="number" id="trans-TW" placeholder="換算台幣">
+            <button id="add-entry">增加</button>
+        </div>
+        <div class="copy-button">
+            <button id="copy-entries">複製</button>
+        </div>
+        <button id="show-records">歷史紀錄</button>
+        <button id="erase-records">清空歷史紀錄</button>
+        <div class="entries">
+            <table calss="entry-table" id="entry-table">
+                <thead>  
+                    <!--Date 分類 紐支出 紐收入 Note paymentMethod paymentBy 台幣支出 換算台幣-->
+                    <tr>
+                        <th>日期</th>
+                        <th>分類</th>
+                        <th>紐支出</th>
+                        <th>紐收入</th>
+                        <th>Note</th>
+                        <th>paymentMethod</th>
+                        <th>paymentBy</th>
+                        <th>台幣支出</th>
+                        <th>換算台幣</th>
+                    </tr>
+                </thead>
+                <tbody id="entry-list">
+                    <!--明細-->
+                    <!-- <td><button class="edit-entry-button">编辑</button></td>
+                    <td><button class="delete-entry-button">删除</button></td> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="total">
+            <p>總金額：<span id="total-amount">$0.00</span></p>
+        </div>
+    </div>
+    <table id="records-table">
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>分類</th>
+            <th>紐支出</th>
+            <th>紐收入</th>
+            <th>Note</th>
+            <th>paymentMethod</th>
+            <th>paymentBy</th>
+            <th>台幣支出</th>
+            <th>換算台幣</th>
+          </tr>
+        </thead>
+        <tbody>
+            <!--明細-->
+        </tbody>
+      </table>
+    <script src="script.js"></script>
+</body>
+</html>

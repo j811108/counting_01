@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.entry-form input, .entry-form button {
+    margin: 5px;
+}
+
+.entry-form select, .entry-form input[type="number"], .entry-form input[type="text"] {
+    width: 100%;
+}
+
+.entry-form select {
+    margin-top: 5px;
+}
+
+.entries {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #000; /* 设置表格边框宽度和颜色 */
+}
+
+entry-table {
+    border: 2px solid black;
+    background-color: aquamarine;
+}
+
+th, td {
+    border: 2px solid #000; /* 设置表头和单元格边框宽度和颜色 */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: tomato; /* 设置表头的背景颜色 */
+}
+
+tr:nth-child(even) {
+    background-color: #fff; /* 设置偶数行的背景颜色 */
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* 设置奇数行的背景颜色 */
+}
+
+.total {
+    margin-top: 20px;
+}
+
+records-table {
+    display: none;
+}
